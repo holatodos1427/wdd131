@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - David Cambeiro</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - David Cambeiro - Homepage about me">
+    <meta name="author" content="David Cambeiro">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=Noto+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
-    <h1>WDD 131 - David Cambeiro</h1>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/marcos-cambeiro-2b88231a7/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/.">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+                <li><a href="project/index.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>David Cambeiro</h1>
+        <div class="cards-grid">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-body">
+                    <div class="bio-row">
+                        <p>I'm David Cambeiro and I was born in Peru. Recently I have been practicing my Web Development skills with the desire to get hired as a professional developer.</p>
+                        <img class="bio-photo" src="images/david-photo.jpg" alt="My personal photo">
+                    </div>
+
+                    <div class="country-title">Arequipa, Peru</div>
+                    <div class="country-row">
+                        <div class="flag-block">
+                            <img class="flag-img" src="images/peru-flag.webp" alt="Flag of Peru">
+                            <p class="flag-caption">Official Flag of Peru</p>
+                        </div>
+                        <p>Peru is a megadiverse country, with habitats ranging from the arid plains of the Pacific coastal region in the west to the peaks of the Andes mountains extending from the north to the southeast of the country.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <ul class="resources-list">
+                    <li><a href="https://dev.to">Dev.to Community</a></li>
+                    <li><a href="https://smashingmagazine.com">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com">CSS Tricks</a></li>
+                    <li><a href="https://w3schools.com">W3 Schools</a></li>
+                    <li><a href="https://udemy.com">Udemy</a></li>
+                    <li><a href="https://picsum.photos">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> David Cambeiro Arequipa, Peru</p>
+        <p id="banana"></p>
+    </footer>
+
 </body>
 </html>
