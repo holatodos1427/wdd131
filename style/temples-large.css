@@ -1,0 +1,53 @@
+@media (min-width: 768px) {
+
+    header {
+        flex-wrap: nowrap;
+        padding: 0 2rem;
+        height: 64px;
+        gap: 1.5rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #main-nav {
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    #main-nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    #main-nav a {
+        padding: 0.45rem 1rem;
+        border-radius: 2rem;
+    }
+
+    #main-nav a:hover {
+        padding-left: 1rem;
+    }
+
+    main {
+        padding: 0 2rem;
+        margin: 2.5rem auto;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure img {
+        height: 185px;
+    }
+}
