@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peru site | David Cambeiro</title>
+    <meta name="author" content="David Cambeiro">
+    <meta name="title" content="Peru site | David Cambeiro">
+    <meta name="description" content="An immersive site exploring the vibrant culture, breathtaking landscapes, and historic landmarks of Peru.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-flag">
+                <div class="flag-bar red"></div>
+                <div class="flag-bar white"></div>
+                <div class="flag-bar red"></div>
+            </div>
+            <div class="header-text">
+                <h1>Peru</h1>
+                <p>Land of the Incas</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 900px)" srcset="images/peru-large.webp">
+                <img src="images/peru-small.webp"
+                     srcset="images/peru-small.webp 400w, images/peru-large.webp 800w"
+                     sizes="(min-width: 900px) 800px, 100vw"
+                     alt="Machu Picchu ruins in the Andes mountains"
+                     width="400" height="267">
+            </picture>
+        </div>
+
+        <div class="content">
+            <section class="about">
+                <h2>About Peru</h2>
+                <p>Peru is a country located in western South America. It is bordered by Ecuador, Colombia, Brazil, Bolivia, and Chile. Peru is known for its rich history, including the ancient Inca Empire, as well as its diverse geography which includes the Andes mountains, the Amazon rainforest, and a long Pacific coastline.</p>
+                <p>The capital city is Lima, and the country has a population of about 33 million people. Peru is also famous for Machu Picchu, which is one of the most visited tourist destinations in the world.</p>
+            </section>
+
+            <section class="facts">
+                <h2>Quick Facts</h2>
+                <table>
+                    <tr>
+                        <th>Capital</th>
+                        <td>Lima</td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td>Spanish, Quechua</td>
+                    </tr>
+                    <tr>
+                        <th>Population</th>
+                        <td>33 million</td>
+                    </tr>
+                    <tr>
+                        <th>Area</th>
+                        <td>1,285,216 km²</td>
+                    </tr>
+                    <tr>
+                        <th>Currency</th>
+                        <td>Sol (PEN)</td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone</th>
+                        <td>UTC-5</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="weather">
+                <h2 class="weather-heading">Weather</h2>
+
+                <img class="weather-icon" src="images/partly-cloudy.svg" alt="partly cloudy icon" width="64" height="64">
+
+                <p><strong>Condition:</strong> Partly Cloudy</p>
+                <p><strong>Temperature:</strong> 8°C</p>
+                <p><strong>Wind Speed:</strong> 20 km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="wind-chill">--</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> David Cambeiro Arequipa, Peru | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
