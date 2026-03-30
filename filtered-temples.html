@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album – Filtered</title>
+    <meta name="description" content="An inspiring photo album showcasing the majestic spires and serene grounds of Latter-day Saint temples from diverse nations and cultures.">
+    <meta name="author" content="David Cambeiro">
+    <link rel="stylesheet" href="styles/temples-filtered.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <a id="header-link" href="filtered-temples.html">Temple Album</a>
+        <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="filter-heading">Home</h1>
+        <div class="gallery" id="gallery"></div>
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span> David Cambeiro; Arequipa, Peru</p>
+        <p id="banana"></p>
+    </footer>
+</body>
+</html>
