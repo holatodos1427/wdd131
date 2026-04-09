@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="David Cambeiro" />
+  <meta name="description" content="Submit a product review. Rate your product, share your experience, and help others make informed decisions." />
+  <title>Product Review Form | David Cambeiro</title>
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+ 
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="header-eyebrow">Customer Feedback</span>
+      <h1 class="header-title">Product Review</h1>
+      <p class="header-sub">Share your experience and help the community.</p>
+    </div>
+    <div class="header-accent" aria-hidden="true"></div>
+  </header>
+ 
+  <main class="main-content">
+    <form method="get" action="review.html" class="review-form">
+
+      <div class="form-group">
+        <label for="product-name" class="form-label">
+          Product Name <span class="astheric" aria-hidden="true">*</span>
+        </label>
+        <div class="select-wrapper">
+          <select id="product-name" name="product" required autocomplete="off">
+            <option value="" disabled selected>Select a Product …</option>
+          </select>
+          <span class="select-arrow" aria-hidden="true">▾</span>
+        </div>
+      </div>
+ 
+      <fieldset class="form-group form-fieldset">
+        <legend class="form-label">
+          Overall Rating <span class="astheric" aria-hidden="true">*</span>
+        </legend>
+        <div class="star-rating">
+          <!-- Stars rendered right-to-left so CSS sibling trick works -->
+          <input type="radio" id="star5" name="rating" value="5" required />
+          <label for="star5" title="5 stars - Outstanding">★</label>
+ 
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars - Great">★</label>
+ 
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars - Good">★</label>
+ 
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars - Fair">★</label>
+ 
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star - Poor">★</label>
+        </div>
+        <p class="rating-hint" aria-live="polite" id="rating-hint"></p>
+      </fieldset>
+ 
+      <div class="form-group">
+        <label for="install-date" class="form-label">
+          Date of Installation <span class="astheric" aria-hidden="true">*</span>
+        </label>
+        <input
+          type="date"
+          id="install-date"
+          name="installDate"
+          required
+          autocomplete="off"
+          class="form-input"
+        />
+      </div>
+ 
+      <fieldset class="form-group form-fieldset">
+        <legend class="form-label">Useful Features <span class="optional-tag">(select all that apply)</span></legend>
+        <div class="checkbox-grid">
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-easy-setup" name="features" value="Easy Setup" />
+            <label for="feat-easy-setup">Easy Setup</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-durability" name="features" value="Durability" />
+            <label for="feat-durability">Durability</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-energy-efficient" name="features" value="Energy Efficient" />
+            <label for="feat-energy-efficient">Energy Efficient</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-value" name="features" value="Value for Money" />
+            <label for="feat-value">Value for Money</label>
+          </div>
+        </div>
+      </fieldset>
+ 
+      <!-- ── Written Review ── -->
+      <div class="form-group">
+        <label for="written-review" class="form-label">
+          Written Review <span class="optional-tag">(optional)</span>
+        </label>
+        <textarea
+          id="written-review"
+          name="review"
+          rows="5"
+          placeholder="Tell us what you think about the product…"
+          class="form-textarea"
+        ></textarea>
+      </div>
+ 
+      <!-- ── User Name ── -->
+      <div class="form-group">
+        <label for="user-name" class="form-label">
+          Your Name <span class="optional-tag">(optional)</span>
+        </label>
+        <input
+          type="text"
+          id="user-name"
+          name="username"
+          placeholder="e.g. Jane Smith"
+          class="form-input"
+          autocomplete="name"
+        />
+      </div>
+ 
+      <!-- ── Submit ── -->
+      <div class="form-group form-submit-row">
+        <input type="submit" value="Submit Review" class="btn-submit" />
+      </div>
+ 
+    </form>
+  </main>
+ 
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>©<span id="currentyear"></span> David Cambeiro Arequipa, Peru</p>
+    </div>
+  </footer>
+ 
+</body>
+</html>
