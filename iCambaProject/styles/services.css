@@ -1,0 +1,113 @@
+.service-row {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.service-row--alt {
+  background: var(--light);
+}
+
+.service-pair {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.service-pair--reverse {
+  flex-direction: row-reverse;
+}
+
+.service-img {
+  flex: 1;
+  max-width: 50%;
+}
+
+.service-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.service-img .img-box--landscape {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-tag {
+  display: inline-block;
+  background: rgba(0, 113, 227, 0.1);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.7rem;
+  border-radius: 980px;
+  margin-bottom: 0.75rem;
+}
+
+.service-text h2 {
+  margin-bottom: 0.75rem;
+}
+
+.service-text > p {
+  margin-bottom: 1.5rem;
+}
+
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--dark);
+}
+
+.service-features li::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  background-color: rgba(0, 113, 227, 0.12);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%230071e3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .service-pair,
+  .service-pair--reverse {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-row {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-row {
+    padding: 2rem 0;
+  }
+}

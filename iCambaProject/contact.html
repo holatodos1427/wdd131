@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact iCamba - send us a message or ask about Apple products and services." />
+  <title>iCamba | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+</head>
+<body>
+
+  <header class="site-header">
+
+    <div class="header-mobile">
+      <a href="index.html" class="logo" aria-label="iCamba home"><img src="images/logo_camba.webp" alt="iCambaLogo"></a>
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" placeholder="Search products…" aria-label="Search products" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Notifications">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="header-desktop" aria-label="Main navigation">
+      <a href="index.html" class="logo"><img src="images/logo_camba.webp" alt="iCambaLogo"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="page-banner" aria-label="Contact page header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have a question about a product or service? Fill out the form and we will get back to you shortly.</p>
+      </div>
+    </section>
+
+    <section class="contact-section" aria-label="Contact form and history">
+      <div class="container contact-grid">
+
+        <!-- Left: Form -->
+        <div class="form-panel">
+          <h2>Send a Message</h2>
+
+          <div id="form-feedback" role="alert" aria-live="polite"></div>
+
+          <form id="contact-form" novalidate>
+
+            <div class="field-group">
+              <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="David Cambeiro"
+                required
+                minlength="2"
+              />
+              <span class="field-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="david.cambeiro@example.com"
+                required
+              />
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option value="">Select a topic</option>
+                <option value="product-question">Product question</option>
+                <option value="trade-in">Trade-in inquiry</option>
+                <option value="device-setup">Device setup</option>
+                <option value="college-advice">MacBook for college</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us how we can help…"
+                rows="5"
+                required
+                minlength="10"
+              ></textarea>
+              <span class="field-error" id="message-error" role="alert"></span>
+            </div>
+
+            <div class="field-group field-group--checkbox">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter">Subscribe to Apple news updates from iCamba</label>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">Send Message</button>
+
+          </form>
+        </div>
+
+        <!-- Right: Past messages from localStorage -->
+        <div class="history-panel" aria-label="Your past messages">
+          <h2>Your Past Messages</h2>
+          <div id="message-history">
+            <!-- Populated by contact.js -->
+          </div>
+          <button id="clear-btn" class="btn-secondary" style="display: none;" aria-label="Clear all past messages">
+            Clear History
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo footer-logo">iCamba</span>
+        <p>Your trusted guide to Apple products.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?filter=iphone">iPhone</a></li>
+          <li><a href="products.html?filter=mac">Mac</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for Apple news and exclusive updates.</p>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <input type="email" placeholder="Email address" aria-label="Your email address" required />
+          <button type="submit" class="btn-primary">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="current-year"></span> iCamba - Cambeiro Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <a href="index.html" class="bnav-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="products.html" class="bnav-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span>Products</span>
+    </a>
+    <a href="services.html" class="bnav-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      <span>Services</span>
+    </a>
+    <a href="contact.html" class="bnav-item bnav-item--active" aria-current="page">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
+</body>
+</html>
