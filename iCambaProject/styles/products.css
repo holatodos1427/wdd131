@@ -8,9 +8,7 @@
   gap: 0.6rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: var(--header-h); /* FIX: was 0px — must offset by desktop header height (60px)
-                           so the filter bar sticks below the sticky site-header,
-                           not behind / on top of it */
+  top: var(--header-h); 
   z-index: 100;
 }
 
@@ -64,11 +62,6 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* FIX: was "bottom: calc(100% - 200px)" — a hardcoded pixel hack.
-   On mobile the card is ~165 px wide → image only ~124 px tall,
-   so 200 px landed inside the card body, not over the image.
-   Using top + transform centres the button inside the image area
-   (≈top 30 % of card height) at every viewport width. */
 .quick-btn {
   position: absolute;
   top: 30%;
@@ -262,8 +255,7 @@
 
 @media (max-width: 768px) {
   .filter-bar {
-    top: var(--header-h-mobile); /* FIX: was "top: 0" — mobile header is taller
-                                    (~90px) so the bar must clear that full height */
+    top: var(--header-h-mobile);
     justify-content: flex-start;
     overflow-x: auto;
     flex-wrap: nowrap;
