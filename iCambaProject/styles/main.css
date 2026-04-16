@@ -11,6 +11,10 @@
   --radius: 12px;
   --radius-sm: 8px;
   --speed: 0.2s;
+  /* FIX: header height tokens used by filter-bar sticky offset */
+  --header-h: 60px;         /* desktop header-desktop height   */
+  --header-h-mobile: 90px;  /* mobile header-mobile height
+                               (logo 70px + 2 × 0.6rem padding) */
 }
 
 *,
@@ -216,7 +220,7 @@ p {
 .site-header {
   background: var(--dark);
   position: sticky;
-  top: 25;
+  top: 0; /* FIX: was "top: 25" — unitless value is invalid, header never stuck */
   z-index: 200;
 }
 
